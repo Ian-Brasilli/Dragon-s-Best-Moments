@@ -67,6 +67,22 @@ body {
     text-shadow: 0 0 10px rgba(255,136,77,0.3);
 }
 
+/* ===== GRID DE VIDEOS (máximo 2 por fila) ===== */
+.grid-videos {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr); /* ← ¡ESTA LÍNEA! */
+    gap: 1.5rem;
+    margin: 1rem 0;
+}
+
+@media (max-width: 600px) {
+    /* En móvil: 1 sola columna */
+    .grid-videos {
+        grid-template-columns: 1fr;  /* ← Cambia esto si quieres más columnas en móvil */
+        gap: 1.2rem;
+    }
+}
+
 .marco-head h3 {
     color: #ffdd99;
     font-weight: normal;
