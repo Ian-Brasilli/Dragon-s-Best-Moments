@@ -143,6 +143,36 @@ body {
         gap: 1rem;
     }
     
+/* Grid base */
+.grid-videos {
+    display: grid;
+    gap: 1.5rem;
+    margin: 1rem 0;
+}
+
+/* Escritorio (ancho > 900px) - 2 columnas */
+@media (min-width: 901px) {
+    .grid-videos {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+/* Tablet (601px a 900px) - 2 columnas */
+@media (min-width: 601px) and (max-width: 900px) {
+    .grid-videos {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 1rem;
+    }
+}
+
+/* CELULAR (menos de 600px) - 1 columna */
+@media (max-width: 600px) {
+    .grid-videos {
+        grid-template-columns: 1fr;  /* ← SOLO UNA COLUMNA */
+        gap: 1rem;
+    }
+}
+
     .contenedor-video {
         padding: 0.8rem;
         margin: 0;
