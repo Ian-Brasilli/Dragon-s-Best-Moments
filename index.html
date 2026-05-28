@@ -75,14 +75,113 @@ body {
     margin: 1rem 0;
 }
 
-@media (max-width: 600px) {
-    /* En móvil: 1 sola columna */
+/* ===== RESPONSIVE CORREGIDO ===== */
+
+/* Tablet (pantallas entre 601px y 900px) - 2 columnas */
+@media (min-width: 601px) and (max-width: 900px) {
+    body {
+        padding: 1rem 0.5rem;
+    }
+    
+    .marco-head {
+        padding: 1.2rem 1.5rem;
+        margin-bottom: 2rem;
+    }
+    
+    .marco-head h1 {
+        font-size: 2rem;
+    }
+    
+    .marco-head h3 {
+        font-size: 1rem;
+    }
+    
+    .marco-texto2 h3 {
+        font-size: 1.5rem;
+    }
+    
     .grid-videos {
-        grid-template-columns: 1fr;  /* ← Cambia esto si quieres más columnas en móvil */
-        gap: 1.2rem;
+        grid-template-columns: repeat(2, 1fr); /* 2 columnas en tablet */
+        gap: 1rem;
+    }
+    
+    .contenedor-video h2 {
+        font-size: 1rem;
     }
 }
 
+/* CELULAR (pantallas de 600px o menos) - 1 SOLA COLUMNA */
+@media (max-width: 600px) {
+    body {
+        padding: 1rem 0.8rem;
+    }
+    
+    .marco-head {
+        padding: 1rem 1.2rem;
+        margin-bottom: 1.5rem;
+    }
+    
+    .marco-head h1 {
+        font-size: 1.4rem;
+    }
+    
+    .marco-head h3 {
+        font-size: 0.8rem;
+    }
+    
+    .marco-texto2 {
+        padding: 0.5rem 1.2rem;
+    }
+    
+    .marco-texto2 h3 {
+        font-size: 1.2rem;
+    }
+    
+    /* ¡ESTA ES LA LÍNEA CLAVE! 1 sola columna en celular */
+    .grid-videos {
+        grid-template-columns: 1fr;  /* ← UNA COLUMNA */
+        gap: 1rem;
+    }
+    
+    .contenedor-video {
+        padding: 0.8rem;
+        margin: 0;
+    }
+    
+    .contenedor-video h2 {
+        font-size: 0.9rem;
+        margin-bottom: 0.8rem;
+    }
+    
+    .fondo {
+        text-align: center;
+        margin-top: 2rem;
+        padding: 1rem;
+    }
+    
+    .fondo h3 {
+        font-size: 0.85rem;
+    }
+}
+
+/* Celular muy pequeño (menos de 400px) */
+@media (max-width: 400px) {
+    .marco-head h1 {
+        font-size: 1.2rem;
+    }
+    
+    .contenedor-video h2 {
+        font-size: 0.8rem;
+    }
+}
+
+/* Escritorio (más de 900px) - 2 columnas */
+@media (min-width: 901px) {
+    .grid-videos {
+        grid-template-columns: repeat(3, 1fr); /* 2 columnas */
+        gap: 1.5rem;
+    }
+}
 .marco-head h3 {
     color: #ffdd99;
     font-weight: normal;
